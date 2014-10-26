@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="midijgw">
+    <file>midi_win.png</file>
+    <file>midi_udp.png</file>
+    <file>midi_offline.png</file>
+    <file>midijgw_icon.png</file>
+    <file>right_doublearrow.png</file>
+    <file>right_arrow.png</file>
+  </qresource>
+</RCC>

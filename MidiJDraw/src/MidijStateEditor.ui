@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MidijStateEditorClass</class>
+ <widget class="QDialog" name="MidijStateEditorClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>399</width>
+    <height>436</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>State Editor</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="verticalSpacing">
+      <number>2</number>
+     </property>
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
+       <property name="leftMargin">
+        <number>2</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
+       <item>
+        <widget class="QComboBox" name="statesCombo">
+         <property name="toolTip">
+          <string>Activates a state</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="zoomIn">
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="toolTip">
+          <string>Zoom In</string>
+         </property>
+         <property name="icon">
+          <iconset resource="res/MidiJDraw.qrc">
+           <normaloff>:/midij/zoom_in.png</normaloff>:/midij/zoom_in.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="zoomOut">
+         <property name="icon">
+          <iconset resource="res/MidiJDraw.qrc">
+           <normaloff>:/midij/zoom_out.png</normaloff>:/midij/zoom_out.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="gridCheck">
+         <property name="text">
+          <string>Grid</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="gridSizeCombo">
+         <property name="toolTip">
+          <string>Number of items in grid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="gridExtraCombo">
+         <property name="toolTip">
+          <string>Grid extra space item</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QGraphicsView" name="graphicsView"/>
+       <widget class="QPlainTextEdit" name="plainTextEdit"/>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res/MidiJDraw.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>zoomIn</sender>
+   <signal>clicked()</signal>
+   <receiver>MidijStateEditorClass</receiver>
+   <slot>zoomIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>358</x>
+     <y>24</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomOut</sender>
+   <signal>clicked()</signal>
+   <receiver>MidijStateEditorClass</receiver>
+   <slot>zoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>14</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>329</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gridCheck</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MidijStateEditorClass</receiver>
+   <slot>gridVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>174</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>35</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gridSizeCombo</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>MidijStateEditorClass</receiver>
+   <slot>gridSizeSelect(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>14</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>353</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gridExtraCombo</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>MidijStateEditorClass</receiver>
+   <slot>gridExtraSelect(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>297</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>222</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>statesCombo</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MidijStateEditorClass</receiver>
+   <slot>stateSelect(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>zoomIn()</slot>
+  <slot>zoomOut()</slot>
+  <slot>gridVisible(bool)</slot>
+  <slot>gridSizeSelect(QString)</slot>
+  <slot>gridExtraSelect(QString)</slot>
+  <slot>stateSelect(int)</slot>
+ </slots>
+</ui>

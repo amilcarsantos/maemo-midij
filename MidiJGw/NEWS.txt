@@ -1,0 +1,20 @@
+Changes between 0.1.1.2 and 0.1.2.3:
+--------------------------------
+
+ * Improved MIDI UDP/IP
+ * Added error information
+ * Fix minor bugs
+
+
+Changes between 0.1.0.0 and 0.1.1.2:
+--------------------------------
+
+ * Single application instance
+ * Fix minor bugs
+
+
+Version 0.1.0.0:
+--------------------------------
+
+ * Initial release
+
