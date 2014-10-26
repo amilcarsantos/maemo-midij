@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<RoutingTable>
+    <scriptfiles>
+        <file filename="Router-Stanton-SCS3d-Gen-scripts.js" functionprefix="Router"/>
+    </scriptfiles>
+    <Source>
+        <control>    <!--    Gain slider    -->
+            <group>[Master]</group>
+            <key>Router.gain</key>
+            <status>0xB0</status>
+            <midino>7</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>
+        <control>    <!--    Pitch slider    -->
+            <group>[Master]</group>
+            <key>Router.pitch</key>
+            <status>0xB0</status>
+            <midino>4</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>
+
+
+		<control name="Play">
+	        <key>Router.playButton</key>
+		    <status>0x90</status>
+		    <midino>0x6D</midino>
+	        <options>
+	            <Script-Binding/>
+	        </options>
+		</control>
+		<control name="Play">
+	        <key>Router.playButton</key>
+		    <status>0x80</status>
+		    <midino>0x6D</midino>
+	        <options>
+	            <Script-Binding/>
+	        </options>
+		</control>
+        <control>    <!--    Cue    -->
+            <group>[Master]</group>
+            <key>Router.cueButton</key>
+            <status>0x90</status>
+            <midino>0x6E</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>
+        <control>    <!--    Cue    -->
+            <group>[Master]</group>
+            <key>Router.cueButton</key>
+            <status>0x80</status>
+            <midino>0x6E</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>
+        <control>    <!--    Sync   -->
+            <group>[Master]</group>
+            <key>Router.syncButton</key>
+            <status>0x90</status>
+            <midino>0x6F</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>
+        <control>    <!--    Sync   -->
+            <group>[Master]</group>
+            <key>Router.syncButton</key>
+            <status>0x80</status>
+            <midino>0x6F</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>
+        <control>    <!--    Tap   -->
+            <group>[Master]</group>
+            <key>Router.tapButton</key>
+            <status>0x90</status>
+            <midino>0x70</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>
+        <control>    <!--    Tap   -->
+            <group>[Master]</group>
+            <key>Router.tapButton</key>
+            <status>0x80</status>
+            <midino>0x70</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>
+
+		<!-- LOOP MODE -->
+            <control>    <!--    B11 headphone cue    -->
+                <group>[Master]</group>
+                <key>Router.B11</key>
+                <status>0x90</status>
+                <midino>0x2C</midino>
+<!--                 <controltype>button</controltype> -->
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>    <!--    B11 headphone cue    -->
+                <group>[Master]</group>
+                <key>Router.B11</key>
+                <status>0x80</status>
+                <midino>0x2C</midino>
+<!--                 <controltype>button</controltype> -->
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>            
+            <control>    <!--    B12    -->
+<!--                 <group>[Channel1]</group> -->
+<!--                 <key>rateRange</key> -->
+                <group>[Master]</group>
+                <key>Router.B12</key>
+                <status>0x90</status>
+                <midino>0x2E</midino>
+<!--                 <controltype>button</controltype> -->
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>    <!--    B12    -->
+<!--                 <group>[Channel1]</group> -->
+<!--                 <key>rateRange</key> -->
+                <group>[Master]</group>
+                <key>Router.B12</key>
+                <status>0x80</status>
+                <midino>0x2E</midino>
+<!--                 <controltype>button</controltype> -->
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>            
+            <control>    <!--    B13    -->
+                <group>[Master]</group>
+                <key>Router.B13</key>
+                <status>0x90</status>
+                <midino>0x30</midino>
+<!--                 <controltype>button</controltype> -->
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>    <!--    B13    -->
+                <group>[Master]</group>
+                <key>Router.B13</key>
+                <status>0x80</status>
+                <midino>0x30</midino>
+<!--                 <controltype>button</controltype> -->
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>            
+            <control>    <!--    B14    -->
+                <group>[Master]</group>
+                <key>Router.B14</key>
+                <status>0x90</status>
+                <midino>0x32</midino>
+<!--                 <controltype>button</controltype> -->
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>    <!--    B14    -->
+                <group>[Master]</group>
+                <key>Router.B14</key>
+                <status>0x80</status>
+                <midino>0x32</midino>
+<!--                 <controltype>button</controltype> -->
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>            
+		
+		
+		<control>    <!--    B15 (left)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x90</status>
+		     <midino>0x48</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>
+		<control>    <!--    B15 (left)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x80</status>
+		     <midino>0x48</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>            
+		<control>    <!--    B16 (left)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x90</status>
+		     <midino>0x4A</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>
+		<control>    <!--    B16 (left)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x80</status>
+		     <midino>0x4A</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>            
+		<control>    <!--    B17 (left)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x90</status>
+		     <midino>0x4C</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>
+		<control>    <!--    B17 (left)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x80</status>
+		     <midino>0x4C</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>            
+		<control>    <!--    B18 (left)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x90</status>
+		     <midino>0x4E</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>
+		<control>    <!--    B18 (left)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x80</status>
+		     <midino>0x4E</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>            
+		<control>    <!--    B19 (right)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x90</status>
+		     <midino>0x4F</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>
+		<control>    <!--    B19 (right)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x80</status>
+		     <midino>0x4F</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>            
+		<control>    <!--    B20 (right)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x90</status>
+		     <midino>0x51</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>
+		<control>    <!--    B20 (right)   -->
+		     <group>[Master]</group>
+		     <key>Router.SurfaceButton</key>
+		     <status>0x80</status>
+		     <midino>0x51</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>            
+		<control>    <!--    B21 (right)   -->
+		     <group>[Master]</group>
+		     <key>Router.SurfaceButton</key>
+		     <status>0x90</status>
+		     <midino>0x53</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>
+		<control>    <!--    B21 (right)   -->
+		     <group>[Master]</group>
+		     <key>Router.SurfaceButton</key>
+		     <status>0x80</status>
+		     <midino>0x53</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>            
+		<control>    <!--    B22 (right)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x90</status>
+		     <midino>0x55</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>
+		<control>    <!--    B22 (right)   -->
+		     <key>Router.SurfaceButton</key>
+		     <status>0x80</status>
+		     <midino>0x55</midino>
+		     <options>
+		         <Script-Binding/>
+		     </options>
+		</control>
+
+		
+        <control>    <!--    C1 touch    -->
+            <group>[Master]</group>
+            <key>Router.C1touch</key>
+            <status>0x90</status>
+            <midino>0x62</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>
+        <control>    <!--    C1 touch    -->
+            <group>[Master]</group>
+            <key>Router.C1touch</key>
+            <status>0x80</status>
+            <midino>0x62</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>            
+        <control>    <!--    C1 Absolute    -->
+            <group>[Master]</group>
+            <key>Router.C1Absolute</key>
+            <status>0xB0</status>
+            <midino>0x62</midino>
+            <options>
+                <Script-Binding/>
+            </options>
+        </control>            
+
+            <control>    <!--    S3 Absolute    -->
+                <group>[Master]</group>
+                <key>Router.S3absolute</key>
+                <status>0xB0</status>
+                <midino>0x0C</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+		    <control>    <!--    S4 Absolute    -->
+                <group>[Master]</group>
+                <key>Router.S4absolute</key>
+                <status>0xB0</status>
+                <midino>1</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control>    <!--    S5 Absolute    -->
+                <group>[Master]</group>
+                <key>Router.S5absolute</key>
+                <status>0xB0</status>
+                <midino>0x0E</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+
+            <control_DELETED>    <!--    S3 Touch    -->
+                <group>[Master]</group>
+                <key>Router.B1touch</key>
+                <status>0x90</status>
+                <midino>0x0C</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control_DELETED>            
+            <control_DELETED>    <!--    S3 Touch    -->
+                <group>[Master]</group>
+                <key>Router.B1touch</key>
+                <status>0x80</status>
+                <midino>0x0C</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control_DELETED>            
+	        <control> <!--       S4 touch    -->
+                <group>[Master]</group>
+                <key>Router.B2touch</key>
+                <status>0x90</status>
+                <midino>1</midino>
+<!--                 <controltype>button</controltype> -->
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+	        <control> <!--       S4 touch    -->
+                <group>[Master]</group>
+                <key>Router.B2touch</key>
+                <status>0x80</status>
+                <midino>1</midino>
+<!--                 <controltype>button</controltype> -->
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control>
+            <control_DELETED>    <!--    S5 Touch    -->
+                <group>[Master]</group>
+                <key>Router.B3touch</key>
+                <status>0x90</status>
+                <midino>0x0E</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control_DELETED>
+            <control_DELETED>    <!--    S5 Touch    -->
+                <group>[Master]</group>
+                <key>Router.B3touch</key>
+                <status>0x80</status>
+                <midino>0x0E</midino>
+                <options>
+                    <Script-Binding/>
+                </options>
+            </control_DELETED>
+
+			
+			
+	</Source>      	
+</RoutingTable>

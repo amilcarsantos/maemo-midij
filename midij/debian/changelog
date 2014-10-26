@@ -1,0 +1,33 @@
+midij (0.1-4) unstable; urgency=low
+
+  * GStreamer build issues 
+
+ -- Amilcar Santos <amilcar.santos@gmail.com>  Sun, 16 Sep 2012 16:00:00 +0100
+
+midij (0.1-3) unstable; urgency=low
+
+  * Added GStreamer for net audio cast 
+  * Added Advanced Settings
+
+ -- Amilcar Santos <amilcar.santos@gmail.com>  Sun, 16 Sep 2012 14:00:00 +0100
+
+midij (0.1-2) unstable; urgency=low
+
+  * Added direct midi network connection to GUI
+  * Added external engine scheme support
+  * Improved relative sliders support
+  * Removed SSL schemes from standard package
+  * Improved MIDI UDP/IP support
+  * Scheme list in alphabetic order
+  * Bugtracker link
+  * Compiled menu icons into resource file
+  * Some smaller bugfixes and code/comments cleanup
+
+ -- Amilcar Santos <amilcar.santos@gmail.com>  Thu, 01 Set 2011 22:22:06 +0100
+
+midij (0.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Amilcar Santos <amilcar.santos@gmail.com>  Tue, 17 Aug 2010 22:22:06 +0100
+

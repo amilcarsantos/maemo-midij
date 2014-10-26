@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Name=MidiJ
+Exec=/opt/midij/MidiJ
+Icon=midij
+StartupWMClass=
+X-Window-Icon=midij
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
+Terminal=false
+

@@ -1,0 +1,11 @@
+<MidiJScheme>
+	<Description>Stanton SCS.3D (Generic engine)</Description>
+	<ToggleArea>140,0,200,60</ToggleArea>
+	<Icon48>stantonscs3d/scs3d_1_24_48.png</Icon48>
+	<Sources>
+		<!-- Mappings  -->
+		<source id="gui">stantonscs3d/midijGui_Stanton.xml</source>
+		<source id="engine">stantonscs3d/Stanton SCS.3d.midi.xml</source>
+		<source id="router">stantonscs3d/Router-Stanton-SCS3d-Generic.xml</source>
+	</Sources>
+</MidiJScheme>

@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="images">
+    <file>close04_62.png</file>
+    <file>close04_hi.png</file>
+    <file>midij_48.png</file>
+    <file>task04_62.png</file>
+    <file>task04_hi.png</file>
+    <file>tools04_62.png</file>
+    <file>tools04_hi.png</file>
+  </qresource>
+</RCC>

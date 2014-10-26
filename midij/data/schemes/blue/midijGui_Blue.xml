@@ -1,0 +1,954 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GuiMapping>
+	<Description>MidiJ - Stanton SCS.3d to SSL</Description>
+    <!-- ScriptFiles>
+        <file filename="Gui-scripts.js" functionprefix="Gui"/>
+    </ScriptFiles-->
+	<Images>
+		<image id="background">blueskin_gray.png</image>
+		<image id="red">blueskin_red_buttons.png</image>
+		<image id="blue">blueskin_blue_sliders.png</image>
+		<image id="purple">blueskin_purple.png</image>
+		<image id="red_dark">blueskin_red_dark_buttons.png</image>
+		<image id="blue_vinyl">blueskin_blue_vinyl.png</image>
+		<image id="bluehi_vinyl">blueskin_bluehi_vinyl.png</image>
+		<image id="blue_buttons">blueskin_blue_buttons.png</image>
+	</Images>
+	<Output>
+		<!-- Mode Buttons -->
+		<Control name="Fx">
+		    <status>0x90</status>
+		    <midino>0x20</midino>
+		    <area>125,56,115,74</area>
+		</Control>
+		<Control name="Eq">
+		    <status>0x90</status>
+		    <midino>0x26</midino>
+		    <area>240,56,115,74</area>
+		</Control>
+		<Control name="Loop">
+		    <status>0x90</status>
+		    <midino>0x22</midino>
+		    <area>125,131,115,71</area>
+		</Control>
+		<Control name="Trig">
+		    <status>0x90</status>
+		    <midino>0x28</midino>
+		    <area>240,131,115,71</area>
+		</Control>
+		<Control name="Vinyl">
+		    <status>0x90</status>
+		    <midino>0x24</midino>
+		    <area>125,203,115,74</area>
+		</Control>
+		<Control name="Deck">
+		    <status>0x90</status>
+		    <midino>0x2A</midino>
+		    <area>240,203,115,74</area>
+		</Control>
+
+
+		<Control name="S1Gain" type="SliderAbsolute">
+		    <status>0xB0</status>
+		    <midino>0x7</midino>
+		    <area>14,24,60,215</area>
+		    <slider reverse="true" />
+		</Control>
+		<Control name="S2Pitch" type="SliderRelative" debug0="red">
+		    <status>0xB0</status>
+		    <midino>0x4</midino>
+		    <area>405,24,60,215</area>
+		    <slider reverse="true" />
+		</Control>
+
+
+		<!-- Vinyl controls -->
+		<Control name="VinylCircleC1_abs" type="WheelAbsolute" group="C1" image="blue_vinyl" debug0="red">
+		    <status>0xB0</status>
+		    <midino>0x62</midino>
+		    <!--  area type="Wheel" size="38">20,288,440,440</area  -->
+		    <area type="Wheel" size="50">18,280,445,445</area>
+		</Control>
+		
+		<Control name="VinylSliderS4" type="SliderAbsolute" group="C1" debug0="green">
+		    <status>0xB0</status>
+		    <midino>0x1</midino>
+			<!-- bigger than the FX S4 slider -->
+		    <area>163,361,156,285</area>
+		    <slider reverse="true" noteval="slider" />
+		</Control>
+
+
+		<!-- Note: vinyl wheel overlaps these buttons -->
+		<Control name="ButtonB11">
+		    <status>0x90</status>
+		    <midino>0x2C</midino>
+		    <area>6,251,78,78</area>
+		</Control>
+		<Control name="ButtonB12">
+		    <status>0x90</status>
+		    <midino>0x2E</midino>
+		    <area>396,251,78,78</area>
+		</Control>
+		<Control name="ButtonB13">
+		    <status>0x90</status>
+		    <midino>0x30</midino>
+		    <area mask="#2d2d2d">6,656,78,78</area>
+		</Control>
+		<Control name="ButtonB14">
+		    <status>0x90</status>
+		    <midino>0x32</midino>
+		    <area mask="#2d2d2d">398,656,78,78</area>
+		</Control>
+		
+		<Control name="FX S3" type="SliderAbsolute" group="S3" draw="fx_eq" image="blue">
+		    <status>0xB0</status>
+		    <midino>0xC</midino>
+		    <area>24,385,100,235</area>
+		    <slider reverse="true" />
+		</Control>
+
+		<Control name="FX S4" type="SliderAbsolute" group="S4" draw="fx_eq" image="blue">
+		    <status>0xB0</status>
+		    <midino>0x1</midino>
+		    <area>170,385,140,235</area>
+		    <slider reverse="true" />
+		</Control>
+
+		<Control name="FX S5" type="SliderAbsolute" group="S5" draw="fx_eq" image="blue">
+		    <status>0xB0</status>
+		    <midino>0xE</midino>
+		    <area>355,385,100,235</area>
+		    <slider reverse="true" />
+		</Control>
+		
+		
+		<Control name="SurfaceButtonB1" group="Buttons" image="blue_buttons" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x48</midino>
+		    <area>15,368,118,62</area>
+		</Control>
+		<Control name="SurfaceButtonB1.1" group="Buttons" image="blue_buttons" debug0="red">
+		    <status>0x90</status>
+		    <midino>0x4A</midino>
+		    <area>15,430,118,62</area>
+		</Control>
+		<!--Control name="SurfaceButtonB2">
+		    <status>0x90</status>
+		    <midino>0x4A</midino>
+		    <area>365,360,90,144</area>
+		</Control-->
+		<Control name="SurfaceButtonB2" group="Buttons"  image="blue_buttons" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x4C</midino>
+		    <area>15,512,118,62</area>
+		</Control>
+		<Control name="SurfaceButtonB2.1" group="Buttons"  image="blue_buttons" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x4E</midino>
+		    <area>15,574,118,62</area>
+		</Control>
+		<Control name="SurfaceButtonB3" group="Buttons" image="blue_buttons" debug0="red">
+		    <status>0x90</status>
+		    <midino>0x4F</midino>
+		    <area>348,368,118,62</area>
+		</Control>
+		<Control name="SurfaceButtonB3.1" group="Buttons"  image="blue_buttons">
+		    <status>0x90</status>
+		    <midino>0x51</midino>
+		    <area>348,430,118,62</area>
+		</Control>
+		<Control name="SurfaceButtonB4" group="Buttons"  image="blue_buttons">
+		    <status>0x90</status>
+		    <midino>0x53</midino>
+		    <area>348,512,118,62</area>
+		</Control>
+		<Control name="SurfaceButtonB4.1" group="Buttons"   image="blue_buttons">
+		    <status>0x90</status>
+		    <midino>0x55</midino>
+		    <area>348,574,118,62</area>
+		</Control>
+		
+<!-- -S4 Touch- -->
+		<Control name="SurfaceButtonB5" type="SliderAbsolute" group="Buttons" debug0="pink">
+		    <status>0xB0</status>
+		    <midino>0x1</midino>
+		    <area>170,368,140,270</area>
+		    <slider reverse="true" />
+		</Control>
+
+
+		<Control name="Play">
+		    <status>0x90</status>
+		    <midino>0x6D</midino>
+		    <area>7,735,121,65</area>
+		</Control>
+		<Control name="Cue">
+		    <status>0x90</status>
+		    <midino>0x6E</midino>
+		    <area>128,735,112,65</area>
+		</Control>
+		<Control name="Sync">
+		    <status>0x90</status>
+		    <midino>0x6F</midino>
+		    <area>240,735,112,65</area>
+		</Control>
+		<Control name="Tap">
+		    <status>0x90</status>
+		    <midino>0x70</midino>
+		    <area>352,735,121,65</area>
+		</Control>
+
+
+		
+	</Output>
+	<Input>
+		<!-- Deck LEDs -->
+		<Control name="LedDeckA">
+		    <status>0x90</status>
+		    <midino>0x71</midino>
+		    <area>103,4,44,44</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+		<Control name="LedDeckB">
+		    <status>0x90</status>
+		    <midino>0x72</midino>
+		    <area>332,3,44,44</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+
+		<Control name="LedPitch">
+		    <status>0x90</status>
+		    <midino>0x3E</midino>
+		    <area>410,2,44,14</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+
+		
+		<!-- Mode Buttons -->
+		<Control name="Fx">
+		    <status>0x90</status>
+		    <midino>0x20</midino>
+		    <area>125,56,115,74</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+		<Control name="Eq">
+		    <status>0x90</status>
+		    <midino>0x26</midino>
+		    <area>240,56,115,74</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+		<Control name="Loop">
+		    <status>0x90</status>
+		    <midino>0x22</midino>
+		    <area>125,131,115,71</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+		<Control name="Trig">
+		    <status>0x90</status>
+		    <midino>0x28</midino>
+		    <area>240,131,115,71</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+		<Control name="Vinyl">
+		    <status>0x90</status>
+		    <midino>0x24</midino>
+		    <area>125,203,115,74</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+		<Control name="Deck">
+		    <status>0x90</status>
+		    <midino>0x2A</midino>
+		    <area>240,203,115,74</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+
+		<Control name="RedLeds S1Gain" debug0="green">
+		    <status>0xB0</status>
+		    <midino>0x7</midino>
+		    <area>86,30,14,205</area>
+		    <state value="0" >background</state>
+		    <state value="0x28">background</state>
+		    <state value="0x29" area="0,182,14, 23">red</state>
+		    <state value="0x2A" area="0,159,14, 46">red</state>
+		    <state value="0x2B" area="0,136,14, 69">red</state>
+		    <state value="0x2C" area="0,115,14,90">red</state>
+		    <state value="0x2D" area="0, 90,14,115">red</state>
+		    <state value="0x2E" area="0, 69,14,136">red</state>
+		    <state value="0x2F" area="0, 46,14,159">red</state>
+		    <state value="0x30" area="0, 23,14,182">red</state>
+		    <state value="0x31" area="0,  0,14,205">red</state>
+		</Control>
+
+		<Control name="RedLeds S2Pitch" debug0="green">
+		    <status>0xB0</status>
+		    <midino>0x3</midino>
+		    <area>380,30,14,205</area>
+		    <state value="0" >background</state>
+		    <state value="20">background</state>
+		    <state value="21" area="0,100,14,105">red</state>
+		    <state value="22" area="0,100,14, 80">red</state>
+		    <state value="23" area="0,100,14, 55">red</state>
+		    <state value="24" area="0,100,14, 30">red</state>
+		    <state value="25" area="0,100,14, 5">red</state>
+		    <state value="26" area="0, 75,14, 30">red</state>
+		    <state value="27" area="0, 50,14, 55">red</state>
+		    <state value="28" area="0, 25,14, 80">red</state>
+		    <state value="29" area="0,  0,14,105">red</state>
+		</Control>
+
+		<Control name="ButtonB11" name0="LedButtonB11">
+		    <status>0x90</status>
+		    <midino>0x2C</midino>
+		    <area>6,251,78,78</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+		<Control name="ButtonB12">
+		    <status>0x90</status>
+		    <midino>0x2E</midino>
+		    <area>396,251,78,78</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+		<Control name="ButtonB13">
+		    <status>0x90</status>
+		    <midino>0x30</midino>
+		    <area mask="#2d2d2d">6,656,78,78</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+		<Control name="ButtonB14">
+		    <status>0x90</status>
+		    <midino>0x32</midino>
+		    <area mask="#2d2d2d">398,656,78,78</area>
+		    <state value="0">background</state>
+		    <state value="1">red</state>
+		    <state value="2">blue</state>
+		    <state value="3">purple</state>
+		</Control>
+
+
+		<!-- Circular Blue LEDs  -->
+		<Control name="BlueLed T1" group="C1" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x63</midino>
+		    <area>94,303,63,68</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed T2" group="C1" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x64</midino>
+		    <area>172,276,49,68</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed T3" group="C1" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x65</midino>
+		    <area>255,276,45,62</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed T4" group="C1" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x66</midino>
+		    <area>319,298,64,73</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+
+		<Control name="BlueLed L1" group="C1">
+		    <status>0x90</status>
+		    <midino>0x62</midino>
+		    <area>38,362,71,61</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed L2" group="C1">
+		    <status>0x90</status>
+		    <midino>0x61</midino>
+		    <area>16,440,62,47</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed L3" group="C1">
+		    <status>0x90</status>
+		    <midino>0x60</midino>
+		    <area>16,521,66,48</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed L4" group="C1" debug0="black">
+		    <status>0x90</status>
+		    <midino>0x5F</midino>
+		    <area>38,582,74,66</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+
+		<Control name="BlueLed R1" group="C1" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x67</midino>
+		    <area>363,354,77,65</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed R2" group="C1" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x68</midino>
+		    <area>400,434,65,48</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed R3" group="C1" debu0g="green">
+		    <status>0x90</status>
+		    <midino>0x69</midino>
+		    <area>401,517,64,46</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed R4" group="C1" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x6A</midino>
+		    <area>371,580,75,65</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+
+		<Control name="BlueLed B1" group="C1" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x5E</midino>
+		    <area>98,631,64,77</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed B2" group="C1" debu0g="green">
+		    <status>0x90</status>
+		    <midino>0x5D</midino>
+		    <area>175,657,49,70</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed B3" group="C1" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x6C</midino>
+		    <area>260,660,49,67</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control>
+		<Control name="BlueLed B4"  group="C1" debug0="green">
+		    <status>0x90</status>
+		    <midino>0x6B</midino>
+		    <area>322,632,63,72</area>
+		    <state value="0">blue_vinyl</state>
+		    <state value="1">bluehi_vinyl</state>
+		</Control> 
+
+
+
+
+		<Control name="SurfaceButtonB1" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x63</midino>
+		    <area>15,368,118,62</area>
+		    <state value="0">blue_buttons</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="SurfaceButtonB1.1" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x61</midino>
+		    <area>15,430,118,62</area>
+		    <state value="0">blue_buttons</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="SurfaceButtonB2" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x60</midino>
+		    <area>15,512,118,62</area>
+		    <state value="0">blue_buttons</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="SurfaceButtonB2.1" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x5E</midino>
+		    <area>15,574,118,62</area>
+		    <state value="0">blue_buttons</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="SurfaceButtonB3" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x66</midino>
+		    <area>348,368,118,62</area>
+		    <state value="0">blue_buttons</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="SurfaceButtonB3.1" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x68</midino>
+		    <area>348,430,118,62</area>
+		    <state value="0">blue_buttons</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="SurfaceButtonB4" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x69</midino>
+		    <area>348,512,118,62</area>
+		    <state value="0">blue_buttons</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="SurfaceButtonB4.1" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x6B</midino>
+		    <area>348,574,118,62</area>
+		    <state value="0">blue_buttons</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="SurfaceButtonB5_BG" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x64</midino>
+		    <area>156,354,166,296</area>
+		    <state value="0">blue_buttons</state>
+		    <state value="1">red_dark</state>
+		</Control>
+
+
+
+
+		<!-- Sufface Buttons Red LEDs -->
+		<Control name="RedLed SurfaceButtonL1" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x48</midino>
+		    <area>137,380,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonL1.1" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x49</midino>
+		    <area>137,415,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonL2" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x4A</midino>
+		    <!--  area>343,373,14,100</area-->
+		    <area>137,450,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonL2.1" group="Buttons" debug0="red">
+		    <status>0x90</status>
+		    <midino>0x4B</midino>
+		    <area>137,485,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonL3" group="Buttons" debug0="red">
+		    <status>0x90</status>
+		    <midino>0x4C</midino>
+		    <!--area>123,544,14,100</area-->
+		    <area>137,520,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonL3.1" group="Buttons" debug0="red">
+		    <status>0x90</status>
+		    <midino>0x4D</midino>
+		    <area>137,555,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonL4" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x4E</midino>
+		    <!--area>343,544,14,100</area-->
+		    <area>137,590,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+
+		<Control name="RedLed SurfaceButtonR1" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x4F</midino>
+		    <area>327,380,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonR1.1" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x50</midino>
+		    <area>327,415,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonR2" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x51</midino>
+		    <!--  area>343,373,14,100</area-->
+		    <area>327,450,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonR2.1" group="Buttons">
+		    <status>0x90</status>
+		    <midino>0x52</midino>
+		    <area>327,485,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonR3" group="Buttons" debug0="white">
+		    <status>0x90</status>
+		    <midino>0x53</midino>
+		    <area>327,520,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonR3.1" group="Buttons" debug0="gray">
+		    <status>0x90</status>
+		    <midino>0x54</midino>
+		    <area>327,555,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+		<Control name="RedLed SurfaceButtonR4"  group="Buttons" debug0="white">
+		    <status>0x90</status>
+		    <midino>0x55</midino>
+		    <!--area>343,544,14,100</area-->
+		    <area>327,590,16,35</area>
+		    <state value="0x00">background</state>
+		    <state value="0x01">red</state>
+		    <state value="0x40">background</state>
+		    <state value="0x41">red_dark</state>
+		</Control>
+
+		<Control name="RedLeds S3-C1" group="C1">
+		    <status>0xB0</status>
+		    <midino>0xC</midino>
+		    <area>137,380,16,245</area>
+		    <state value="0">background</state>
+		<state value="1" area="0,210,16,35">red</state>
+		<state value="2" area="0,175,16,35">red</state>
+		<state value="3" area="0,140,16,35">red</state>
+		<state value="4" area="0,105,16,35">red</state>
+		<state value="5" area="0,70,16,35">red</state>
+		<state value="6" area="0,35,16,35">red</state>
+		<state value="7" area="0,0,16,35">red</state>
+		    <state value="8">background</state>
+		</Control>
+		<Control name="RedLeds S4-C1" group="C1" debug0="white">
+		    <status>0xB0</status>
+		    <midino>0x1</midino>
+		    <area>231,380,18,245</area>
+		    <state value="0">background</state>
+		    <state value="1" area="0,210,18,35">red</state>
+		    <state value="2" area="0,175,18,35">red</state>
+		    <state value="3" area="0,140,18,35">red</state>
+		    <state value="4" area="0,105,18,35">red</state>
+		    <state value="5" area="0, 70,18,35">red</state>
+		    <state value="6" area="0, 35,18,35">red</state>
+		    <state value="7" area="0,  0,18,35">red</state>
+		    <state value="8">background</state>
+		</Control>
+		<Control name="RedLeds S5-C1" group="C1" debug0="green">
+		    <status>0xB0</status>
+		    <midino>0xE</midino>
+		    <area>327,380,16,245</area>
+		    <state value="0">background</state>
+		<state value="1" area="0,210,16,35">red</state>
+		<state value="2" area="0,175,16,35">red</state>
+		<state value="3" area="0,140,16,35">red</state>
+		<state value="4" area="0,105,16,35">red</state>
+		<state value="5" area="0,70,16,35">red</state>
+		<state value="6" area="0,35,16,35">red</state>
+		<state value="7" area="0,0,16,35">red</state>
+		    <state value="8">background</state>
+		</Control>
+
+		<Control name="RedLeds S3" group="S3" debug0="pink">
+		    <status>0xB0</status>
+		    <midino>0xC</midino>
+		    <area>137,380,16,245</area>
+		    <state value="0">background</state>
+		    <!-- acho q do 0x15..0x22: funca no [EQ]
+		    	 0x19=centro;
+		    	 0x15 = 4leds de baixo;
+		    	 0x21 = 4leds de cima;-->
+		    <state value="21" area="0,105,18,140">red</state>
+		    <state value="22" area="0,105,18,105">red</state>
+		    <state value="23" area="0,105,18,70">red</state>
+		    <state value="24" area="0,105,18,35">red</state>
+			<state value="25" area="0,70,18,70">red</state>
+			<state value="26" area="0,35,18,105">red</state>
+			<state value="27" area="0,0,18,140">red</state>
+		    <!-- acho q do 0x28..0x2e: funca no [FX]
+		    	 0x28= 1 led baixo;
+		    	 0x2B = 4leds de baixo;
+		    	 0x2E = todos os leds;-->
+		    <state value="40">background</state>
+			<state value="41" area="0,210,18,35">red</state>
+			<state value="42" area="0,175,18,70">red</state>
+			<state value="43" area="0,140,18,105">red</state>
+			<state value="44" area="0,105,18,140">red</state>
+			<state value="45" area="0,70,18,175">red</state>
+			<state value="46" area="0,35,18,210">red</state>
+			<state value="47" area="0,0,18,245">red</state>
+		</Control>
+		<Control name="RedLeds S4" group="S4" debug0="white">
+		    <status>0xB0</status>
+		    <midino>0x1</midino>
+		    <area>231,380,18,245</area>
+		    <state value="0">background</state>
+		    <!-- acho q do 0x15..0x22: funca no [EQ]
+		    	 0x19=centro;
+		    	 0x15 = 4leds de baixo;
+		    	 0x21 = 4leds de cima;-->
+			<state value="21" area="0,105,18,140">red</state>
+			<state value="22" area="0,105,18,105">red</state>
+			<state value="23" area="0,105,18,70">red</state>
+			<state value="24" area="0,105,18,35">red</state>
+			<state value="25" area="0,70,18,70">red</state>
+			<state value="26" area="0,35,18,105">red</state>
+			<state value="27" area="0,0,18,140">red</state>
+		    <!-- acho q do 0x28..0x2e: funca no [FX]
+		    	 0x28= 1 led baixo;
+		    	 0x2B = 4leds de baixo;
+		    	 0x2E = todos os leds;-->
+		    <state value="40">background</state>
+			<state value="41" area="0,210,18,35">red</state>
+			<state value="42" area="0,175,18,70">red</state>
+			<state value="43" area="0,140,18,105">red</state>
+			<state value="44" area="0,105,18,140">red</state>
+			<state value="45" area="0,70,18,175">red</state>
+			<state value="46" area="0,35,18,210">red</state>
+			<state value="47" area="0,0,18,245">red</state>
+		</Control>
+		<Control name="RedLeds S5" group="S5" debug0="pink">
+		    <status>0xB0</status>
+		    <midino>0xE</midino>
+		    <area>327,380,16,245</area>
+		    <state value="0">background</state>
+		    <!-- acho q do 0x15..0x22: funca no [EQ]
+		    	 0x19=centro;
+		    	 0x15 = 4leds de baixo;
+		    	 0x21 = 4leds de cima;-->
+			<state value="21" area="0,105,18,140">red</state>
+			<state value="22" area="0,105,18,105">red</state>
+			<state value="23" area="0,105,18,70">red</state>
+			<state value="24" area="0,105,18,35">red</state>
+			<state value="25" area="0,70,18,70">red</state>
+			<state value="26" area="0,35,18,105">red</state>
+			<state value="27" area="0,0,18,140">red</state>
+		    <!-- acho q do 0x28..0x2e: funca no [FX]
+		    	 0x28= 1 led baixo;
+		    	 0x2B = 4leds de baixo;
+		    	 0x2E = todos os leds;-->
+		    <state value="40">background</state>
+			<state value="41" area="0,210,18,35">red</state>
+			<state value="42" area="0,175,18,70">red</state>
+			<state value="43" area="0,140,18,105">red</state>
+			<state value="44" area="0,105,18,140">red</state>
+			<state value="45" area="0,70,18,175">red</state>
+			<state value="46" area="0,35,18,210">red</state>
+			<state value="47" area="0,0,18,245">red</state>
+		</Control>
+
+		<Control name="Play">
+		    <status>0x90</status>
+		    <midino>0x6D</midino>
+		    <area>7,735,121,65</area>
+		    <state value="0">blue</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="Cue">
+		    <status>0x90</status>
+		    <midino>0x6E</midino>
+		    <area>128,735,112,65</area>
+		    <state value="0">blue</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="Sync">
+		    <status>0x90</status>
+		    <midino>0x6F</midino>
+		    <area>240,735,112,65</area>
+		    <state value="0">blue</state>
+		    <state value="1">red</state>
+		</Control>
+		<Control name="Tap">
+		    <status>0x90</status>
+		    <midino>0x70</midino>
+		    <area>352,735,121,65</area>
+		    <state value="0">blue</state>
+		    <state value="1">red</state>
+		</Control>
+
+
+
+		<MultiControl name="BlueLeds">
+		    <status>0xB0</status>
+		    <midino>0x62</midino>
+		    <control>BlueLed T1</control>
+		    <control>BlueLed T2</control>
+		    <control>BlueLed T3</control>
+		    <control>BlueLed T4</control>
+		    <control>BlueLed L1</control>
+		    <control>BlueLed L2</control>
+		    <control>BlueLed L3</control>
+		    <control>BlueLed L4</control>
+		    <control>BlueLed R1</control>
+		    <control>BlueLed R2</control>
+		    <control>BlueLed R3</control>
+		    <control>BlueLed R4</control>
+		    <control>BlueLed B1</control>
+		    <control>BlueLed B2</control>
+		    <control>BlueLed B3</control>
+		    <control>BlueLed B4</control>
+		    <state value="0"></state>
+		    <state value="1"><control state="1">BlueLed B2</control></state>
+		    <state value="2"><control state="1">BlueLed B1</control></state>
+		    <state value="3"><control state="1">BlueLed L4</control></state>
+		    <state value="4"><control state="1">BlueLed L3</control></state>
+		    <state value="5"><control state="1">BlueLed L2</control></state>
+		    <state value="6"><control state="1">BlueLed L1</control></state>
+		    <state value="7"><control state="1">BlueLed T1</control></state>
+		    <state value="8"><control state="1">BlueLed T2</control></state>
+		    <state value="9"><control state="1">BlueLed T3</control></state>
+		    <state value="10"><control state="1">BlueLed T4</control></state>
+		    <state value="11"><control state="1">BlueLed R1</control></state>
+		    <state value="12"><control state="1">BlueLed R2</control></state>
+		    <state value="13"><control state="1">BlueLed R3</control></state>
+		    <state value="14"><control state="1">BlueLed R4</control></state>
+		    <state value="15"><control state="1">BlueLed B4</control></state>
+		    <state value="16"><control state="1">BlueLed B3</control></state>
+			
+		</MultiControl>
+	</Input>
+	<SysexInput>
+	<!-- TBD Fazer o tratamento de SysexMsg em Script -->
+		<Messages>
+			<ManufacturerID>0x00,0x01,0x60</ManufacturerID> <!-- Stanton -->
+			<subid>0x01</subid>
+			<message>
+				<!-- enables "C1" controls - Vynil mode -->
+				<subid>0x00</subid>
+				<action>
+					<controls group="C1">visible:true</controls>
+					<controls group="S5">visible:false</controls>
+					<controls group="S4">visible:false</controls>
+					<controls group="S3">visible:false</controls>
+					<controls group="Buttons">visible:false</controls>
+					<background area="17,275,453,455">blue_vinyl</background>
+				</action>
+			</message>
+			<message>
+				<!-- enables "S5" controls -->
+				<subid>0x01</subid>
+				<action>
+					<controls group="C1">visible:false</controls>
+					<controls group="S5">visible:true</controls>
+					<controls group="S4">visible:false</controls>
+					<controls group="S3">visible:false</controls>
+					<controls group="Buttons">visible:false</controls>
+				</action>
+			</message>
+			<message>
+				<!-- enables "S3" controls -->
+				<subid>0x02</subid>
+				<action>
+					<controls group="C1">visible:false</controls>
+					<controls group="S5">visible:false</controls>
+					<controls group="S4">visible:false</controls>
+					<controls group="S3">visible:true</controls>
+					<controls group="Buttons">visible:false</controls>
+				</action>
+			</message>
+			<message>
+				<!-- enables "S3+S5" controls - Fx/Eq modes -->
+				<subid>0x03</subid>
+				<action>
+					<controls group="C1">visible:false</controls>
+					<controls group="S5">visible:true</controls>
+					<controls group="S4">visible:true</controls>
+					<controls group="S3">visible:true</controls>
+					<controls group="Buttons">visible:false</controls>
+					<background area="15,350,450,300">blue</background>
+				</action>
+			</message>
+			<message>
+				<!-- enables "Buttons" controls - Loop/Trig modes -->
+				<subid>0x04</subid>
+				<action>
+					<controls group="C1">visible:false</controls>
+					<controls group="S5">visible:false</controls>
+					<controls group="S4">visible:false</controls>
+					<controls group="S3">visible:false</controls>
+					<controls group="Buttons">visible:true</controls>
+					<background area="15,350,450,310">blue_buttons</background>
+				</action>
+			</message>
+		</Messages>
+		<Init>0x00,0x01,0x60,0x01,0x00</Init>
+	</SysexInput>
+
+</GuiMapping>
